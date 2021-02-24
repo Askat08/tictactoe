@@ -16,3 +16,29 @@
 .sign-up button {
   margin-top: 100px;
 }
+
+.board {
+  width: 30rem;
+  height: 30rem;
+  margin: auto;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: paleturquoise;
+}
+
+.square:hover {
+  background-color: beige;
+  cursor: pointer;
+}
+
+.symbol {
+  font-size: 3rem;
+}
