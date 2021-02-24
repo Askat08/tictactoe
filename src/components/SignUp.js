@@ -3,6 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import ErrorIcon from '@material-ui/icons/Error';
 import Tooltip from '@material-ui/core/Tooltip';
+import { Redirect } from 'react-router-dom';
 
 const SignUp = () => {
   const [inputText, setInputText] = useState('');
@@ -57,7 +58,11 @@ const SignUp = () => {
   return (
     <>
       {isAuth ? (
-        <div>TicTacToe Board</div>
+        <Redirect
+          to={{
+            pathname: '/game',
+          }}
+        />
       ) : (
         <div className='sign-up'>
           <h1>To start game enter your email</h1>
@@ -67,6 +72,7 @@ const SignUp = () => {
             autoFocus
             type='email'
             value={inputText}
+            ref={(input) => {}}
             onChange={onInputChange}
             error={error}
             label={error ? 'Error' : ''}
